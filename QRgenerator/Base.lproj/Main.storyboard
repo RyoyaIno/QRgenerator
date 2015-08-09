@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="QRgenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="QRコードにする文字を入力" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NLU-yC-3FV">
+                                <rect key="frame" x="125" y="70" width="350" height="40"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="LUI-cv-Ypb"/>
+                                    <constraint firstAttribute="height" constant="40" id="NIm-tA-Lit"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGw-GF-LFu">
+                                <rect key="frame" x="125" y="179" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="6dP-vq-hRj"/>
+                                    <constraint firstAttribute="width" constant="350" id="gCu-gH-zxG"/>
+                                    <constraint firstAttribute="height" constant="350" id="gm5-pe-xj9"/>
+                                    <constraint firstAttribute="width" constant="250" id="l70-Lz-oo0"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gCu-gH-zxG"/>
+                                        <exclude reference="gm5-pe-xj9"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhU-8q-z76">
+                                <rect key="frame" x="235" y="124" width="130" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="G71-Ig-cfv"/>
+                                    <constraint firstAttribute="height" constant="40" id="bgZ-BQ-bUq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.97747131220000005" green="0.96551098219999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title=" Generate ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="generate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nu9-42-N9Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97747131216201777" green="0.96551098218549058" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="YGw-GF-LFu" secondAttribute="centerX" id="1WZ-ls-AGy"/>
+                            <constraint firstItem="NLU-yC-3FV" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="679-Qu-fcY"/>
+                            <constraint firstItem="YGw-GF-LFu" firstAttribute="top" secondItem="OhU-8q-z76" secondAttribute="bottom" constant="20" id="ADk-he-RcT"/>
+                            <constraint firstAttribute="centerX" secondItem="OhU-8q-z76" secondAttribute="centerX" id="bIM-Rd-p3M"/>
+                            <constraint firstAttribute="centerX" secondItem="NLU-yC-3FV" secondAttribute="centerX" id="cCo-NX-72d"/>
+                            <constraint firstItem="OhU-8q-z76" firstAttribute="top" secondItem="NLU-yC-3FV" secondAttribute="bottom" constant="20" id="sja-sG-Hsr"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="LSI-nc-X1h" appends="YES" id="uDy-p8-pd0"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="QRCode" destination="YGw-GF-LFu" id="iK5-tF-iM1"/>
+                        <outlet property="TextBox" destination="NLU-yC-3FV" id="fNG-r6-hVo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LSI-nc-X1h">
+                    <connections>
+                        <action selector="tapScreen:" destination="vXZ-lx-hvc" id="pHq-mr-o2S"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-12" y="446"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+</document>
